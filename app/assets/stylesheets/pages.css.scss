@@ -185,7 +185,7 @@ input    {
 .judge{
 	width: 55%;
 	height: 500px;
-	background: url(/assets/judgereport.png) no-repeat;
+	background-image: asset_url('judgereport.png');
 	background-position: center;
 	background-size: cover;
 	margin-right: auto;
