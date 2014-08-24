@@ -1,0 +1,102 @@
+<div class="landing">
+	<div class="cover_grey">
+
+		<div class="message">
+			<h1>Simon Cowell for Startup Ideas</h1>
+			<h2>Submit a pitch. Get real, candid, feedback. Free.</h2>
+		</div>
+
+		<div class="action">
+	 		<div class="call">
+				<%= form_for @user, {:class => "form-inline"} do |f| %>
+						<% if @user.errors.any? %>
+						<ul>
+						  <% @user.errors.full_messages.each do |msg| %>
+						    <li><%= msg %></li>
+						  <% end %>
+						</ul>
+						<% end %>
+					<div class="form-group">
+						<%= f.text_field :email, :placeholder => "Email Address" %>
+						<%= f.submit "Join the Beta", class: "btn-action" %>
+					</div>
+				<% end %>
+			</div>
+	 	</div>
+
+	</div>
+
+	<div class="cover_red">
+		<div class="sell_title_red">
+			Pitch Your Project 
+		</div>
+
+		<div class="explain_info">
+			Idea owners submit a single-image elevator pitch. Short. Sweet.
+		</div>	
+		<div class="explain">
+			
+		</div>	
+		<div class="explain_right">
+
+		</div>
+
+	</div>
+
+	<div class="cover_grey">
+		<div class="sell_title_red">
+			Get Meaningful Feedback
+		</div>
+
+		<div class="explain_info">
+			The judge reviews and scores every idea. The good, the bad and the ugly. 
+		</div>	
+		<div class="judge">
+			
+		</div>	
+		<div class="explain_right">
+
+		</div>
+
+	</div>
+
+	<div class="cover_red">
+		<div class="sell_title_red">
+			Take it to the People 
+		</div>
+
+		<div class="explain_info">
+			Get input from the jury (everyone). Build a following. Make something great. 
+		</div>	
+		<div class="jury">
+			
+		</div>	
+		<div class="explain_right">
+
+		</div>
+
+	</div>
+
+	<div class="action_grey">
+		<div class="sell_title_grey">
+			Life's too short to build something nobody wants
+		</div>
+
+		<div class="sell_info_grey_action">
+			Sign up now and be the first to be judged
+		</div>
+		
+		<div class="last_action">
+	 		<div class="last_call">
+				<%= form_for @user, {:class => "form-inline"} do |f| %>
+					<div class="form-group">
+						<%= f.text_field :email, :placeholder => "Email Address" %>
+						<%= f.submit "Join the Beta", class: "btn-final_action" %>
+					</div>
+				<% end %>
+			</div>
+	 	</div>
+	</div>	
+
+
+</div>	

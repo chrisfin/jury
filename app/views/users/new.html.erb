@@ -1,0 +1,29 @@
+<div class="landing_new">
+	<div class="cover_red">
+
+		<div class="message">
+			<h1>JURY</h1>
+			<h2>Life's too short to build something nobody wants.</h2>
+		</div>
+
+		<div class="last_action">
+	 		<div class="last_call">
+				<%= form_for @user, {:class => "form-inline"} do |f| %>
+						<% if @user.errors.any? %>
+						<ul>
+						  <% @user.errors.full_messages.each do |msg| %>
+						    <li><%= msg %></li>
+						  <% end %>
+						</ul>
+						<% end %>
+					<div class="form-group">
+						<%= f.text_field :email, :placeholder => "Email Address" %>
+						<%= f.submit "Request Early Access", class: "btn-action-grey" %>
+					</div>
+				<% end %>
+			</div>
+	 	</div>
+	
+
+	</div>
+</div>		

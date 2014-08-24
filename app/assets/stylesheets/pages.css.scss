@@ -1,0 +1,311 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+html {
+    height: 100%;
+}
+
+body{
+	font-family: 'Lato', serif;
+	font-weight: 100;
+	letter-spacing: 2px;
+	margin: 0;
+	-webkit-font-smoothing:subpixel-antialiased;
+}
+
+/* header #242a2e*/
+
+.navbar-inner {
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+  padding-top: 15px;
+ }
+ .navbar-inner a {
+  color: white;
+  font-size: 16px;
+ }
+
+.brand {
+	float: left;
+	font-size: 35px;
+	color: #f97b5e;
+}
+.brand a {
+  color: #ff6e60;
+  font-size: 35px;
+ }
+.brand a:hover {
+    color: #FFD4CF;
+    text-decoration: none;
+    -webkit-transition:all 0.15s ease-out;
+}
+
+.landing {
+	background: url(/assets/judging-panel.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 700px;
+}
+
+.cover_grey {
+	background: rgba(36, 42, 46, 0.95);
+	color: white;
+	height: 700px;
+}
+
+.cover_red {
+	background: rgba(255, 110, 96, .85);
+	color: white;
+	height: 700px;
+}
+
+.message{
+	text-align: center;
+	padding-bottom: 30px;
+
+}
+
+.message h1 {
+	margin: 0px;
+	padding-top: 245px;
+	padding-bottom: 7px;
+	font-size: 55px;
+	font-weight: 100;
+	letter-spacing: 7px
+}
+
+.message h2 {
+	margin: 0px;
+	font-size: 30px;
+	padding-bottom: 5px;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+.action{
+	font-size: 30px;
+	height: 90px;
+	color:#242a2e;
+}
+
+.call {
+	margin-left: auto;
+	margin-right: auto;
+	width: 45%;
+}
+
+input    {
+	width: 62%;
+	height: 50px;
+	background-color: #FFD4CF;
+	border: 0;
+	font-size:10px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #888888 ;
+   	font-size:15px;
+   	font-weight: 100;
+   	letter-spacing: 1px;
+   	padding-top: 10px;
+   	padding-left: 15px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #888888;
+    opacity:  1;
+   	font-size:15px;
+   	font-weight: 100;
+   	letter-spacing: 1px;
+   	padding-top: 10px;
+   	padding-left: 15px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #888888;
+    opacity:  1;
+    font-size:15px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-top: 10px;
+   	padding-left: 15px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #888888;
+    font-size:15px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-top: 10px;
+   	padding-left: 15px;
+}
+
+/* Button Styles */
+
+.btn-action {
+	height: 50px;
+	background-image:none;
+	border-color:transparent;
+	box-shadow:none;
+	font-size:15px;
+	font-weight: 100;
+	text-shadow:none;
+	border-radius:0px;
+	width:35%;
+   	background-color: #ff6e60;
+   	color: white;
+	float: right;
+	overflow: hidden;
+	letter-spacing: 1px;
+
+}
+
+.sell_title_red{
+	text-align: center;
+	margin: 0px;
+	font-size: 45px;
+	padding-bottom: 5px;
+	font-weight: 100;
+	color: white;
+	padding-top: 30px;
+}
+
+.explain{
+	width: 55%;
+	height: 500px;
+	background: url(/assets/pitch.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.judge{
+	width: 55%;
+	height: 500px;
+	background: url(/assets/judgereport.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.jury {
+	width: 35%;
+	height: 500px;
+	background: url(/assets/juryfeed.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.explain_info{
+	font-size: 30px;
+	font-weight: 100;
+	color: white;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.action_grey {
+	color: white;
+	height: 400px;
+	background: #242a2e;
+}
+
+.sell_title_grey{
+	text-align: center;
+	margin: 0px;
+	font-size: 45px;
+	padding-bottom: 20px;
+	color: #ff6e60;
+	padding-top: 100px;
+}
+
+.sell_info_grey{
+	text-align: center;
+	margin: 0px;
+	font-size: 27px;
+	padding-bottom: 5px;
+	color: white;
+	width: 32em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sell_info_grey_action{
+	text-align: center;
+	margin: 0px;
+	font-size: 27px;
+	margin-top: -25px;
+	padding-bottom: 25px;
+	color: white;
+	width: 32em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.last_action{
+	font-size: 30px;
+	color:#242a2e;
+}
+
+.last_call {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+}
+
+.action_grey {
+	color: white;
+	height: 400px;
+	background: #242a2e;
+}
+
+.btn-final_action{
+	height: 50px;
+	background-image:none;
+	border-color:transparent;
+	box-shadow:none;
+	font-size:15px;
+	text-shadow	:none;
+	border-radius:0px;
+	width:35%;
+  	background-color: #ff6e60;
+  	color: white;
+	float: right;
+	overflow: hidden;
+	letter-spacing: 1px;
+
+}
+
+.btn-action-grey {
+	height: 50px;
+	background-image:none;
+	border-color:transparent;
+	box-shadow:none;
+	font-size:15px;
+	font-weight: 100;
+	text-shadow:none;
+	border-radius:0px;
+	width:35%;
+   	background-color: #242a2e;
+   	color: white;
+	float: right;
+	overflow: hidden;
+	letter-spacing: 1px;
+
+}
+
+.landing_new {
+	background: url(/assets/gavel.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 700px;
+}
+
+
