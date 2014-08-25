@@ -173,9 +173,9 @@ input    {
 }
 
 .sell_one{
-	width: 650px;
-	margin-right: auto;
-	margin-left: auto;
+	position: absolute;
+  	left: 50%;
+  	margin-left: -325px;
 }
 
 .sell_two{
