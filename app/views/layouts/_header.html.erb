@@ -4,6 +4,7 @@
       <div class="brand"><%= link_to "JURY", root_path %></div>
         <ul class="nav navbar-nav navbar-right"> 
           <li><%= link_to "Sign Up", new_user_path %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
           <!-- <li><%= link_to "Blog", "#" %></li> -->
         </ul>
     </div>
