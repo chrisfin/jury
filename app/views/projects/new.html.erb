@@ -1,0 +1,25 @@
+<div class="landing_new">
+	<div class="cover_grey">
+
+		<div class="message">
+			<h1>Take it to the JURY</h1>
+			<h2>Be the first to submit a project.</h2>
+		</div>
+
+		<div class="last_action">
+	 		<div class="last_call">
+	 			<%= simple_form_for(@project, html: {class: "form-horizontal"}) do |f| %>
+  			<%= f.error_notification %>
+  			<%= f.full_error :image_file_size, class: 'alert alert-error' %>
+  			 <%= f.full_error :image_content_type, class: 'alert alert-error' %>
+
+    		<%= f.input :image, label: 'Upload an Image' %>
+    		<%= f.input :image_remote_url, label: "or enter a URL" %>
+						<%= f.submit "Submit a Project", class: "btn-action" %>
+				<% end %>
+			</div>
+	 	</div>
+	
+
+	</div>
+</div>	

@@ -1,6 +1,7 @@
 Judgy::Application.routes.draw do
   devise_for :users
   resources :users
+  resources :projects
   root "pages#index"
   post "pages/beta"
   get "pages/beta"

@@ -17,6 +17,7 @@ gem 'jbuilder', '1.0.2'
 gem 'simple_form'
 gem 'devise'
 gem 'gibbon'
+gem 'paperclip'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

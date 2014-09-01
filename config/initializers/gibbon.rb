@@ -1,3 +1,4 @@
-Gibbon::API.api_key = "037607a4cdc771a49b5b5fb7504e3a18-us9"
+# Must set API Key enivornment variable in production
+Gibbon::API.api_key = ENV['MAILCHIMP_API_KEY']
 Gibbon::API.timeout = 15
 Gibbon::API.throws_exceptions = false

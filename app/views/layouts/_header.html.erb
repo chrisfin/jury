@@ -3,8 +3,13 @@
     <div class="container">
       <div class="brand"><%= link_to "JURY", root_path %></div>
         <ul class="nav navbar-nav navbar-right"> 
-          <li><%= link_to "Sign Up", new_user_path %></li>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+          
+        	<% if user_signed_in? %>
+        		<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        	<% else %>
+            <li><%= link_to "Sign Up", new_user_path %></li>
+          	<li><%= link_to "Log In", new_user_session_path %></li>
+          <% end %>
           <!-- <li><%= link_to "Blog", "#" %></li> -->
         </ul>
     </div>
