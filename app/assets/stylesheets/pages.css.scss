@@ -7,6 +7,7 @@
 
 html {
     height: 100%;
+    background: rgba(36, 42, 46, 1);
 }
 
 body{
@@ -100,47 +101,15 @@ body{
 }
 
 input    {
+	border: 1px solid #888888; 
 	width: 62%;
 	height: 50px;
-	background-color: #FFD4CF;
-	border: 0;
 	font-size:10px;
+	padding-left: 15px;
+	letter-spacing: 1px;
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #888888 ;
-   	font-size:15px;
-   	font-weight: 100;
-   	letter-spacing: 1px;
-   	padding-top: 10px;
-   	padding-left: 15px;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #888888;
-    opacity:  1;
-   	font-size:15px;
-   	font-weight: 100;
-   	letter-spacing: 1px;
-   	padding-top: 10px;
-   	padding-left: 15px;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #888888;
-    opacity:  1;
-    font-size:15px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    padding-top: 10px;
-   	padding-left: 15px;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #888888;
-    font-size:15px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    padding-top: 10px;
-   	padding-left: 15px;
-}
+
 
 /* Button Styles */
 
@@ -294,6 +263,65 @@ input    {
 	background-position: center;
 	background-size: cover;
 	height: 700px;
+}
+
+/* User sign in and sign forms. */
+.border-form-div {
+	background-color: white;
+  max-width: 500px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  margin-top: 80px;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"], {
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.border-form-div input[type="checkbox"] {
+	  text-align: left;
+	  height: 20px;
+	  padding-left: 15px;
+	  cursor:pointer;
+	  width: 15px;
+}
+
+
+.btn-action-bottom {
+	height: 50px;
+	background-image:none;
+	border-color:transparent;
+	box-shadow:none;
+	font-size:15px;
+	font-weight: 100;
+	text-shadow:none;
+	border-radius:0px;
+   	background-color: #ff6e60;
+   	color: white;
+	overflow: hidden;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+
+}
+
+.form-group {
+	font-size: 15px;
+	font-weight: 100;
+	letter-spacing: 1px;
 }
 
 
