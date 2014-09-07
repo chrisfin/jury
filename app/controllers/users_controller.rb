@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user,     only: :index
 	
 	def index
     @users = User.all
@@ -67,4 +68,11 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email)
     end
+
+    def admin_user
+      unless current_user.admin? 
+        redirect_to(root_url)
+        flash[:alert] = 'You must be an admin to access that page.'
+      end
+    end 
 end

@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'gibbon'
 gem 'paperclip'
+gem 'social-share-button'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

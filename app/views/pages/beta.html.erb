@@ -2,11 +2,12 @@
 	<div class="cover_grey">
 	
 		<div class="sell_title_red">
-			We've added <%= @email %> to the JURY BETA list	
+			We've added you to the JURY BETA list
 		</div>
 
 		<div class="image_two">
 			<%= image_tag('jurysell.png', size: '650x488') %>
+			<%= social_share_button_tag("I just followed The JURY - my fav new startup idea", :image => "https://raw.github.com/vkulpa/social-share-button/master/lib/assets/images/sprites/social-share-button/tumblr.png", :url => "http://www.thejury.co/pages/beta") %>
 		</div>	
 
 	</div>

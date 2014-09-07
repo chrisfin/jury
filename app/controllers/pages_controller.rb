@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
 	def beta
 		# Add User Email to MailChimp through API
+		@project = Project.new
 	  gb = Gibbon::API.new
 	  email = params[:user][:email]
 	  cookies[:email] = email
