@@ -327,12 +327,17 @@ input    {
 /* footer */
 
 .foot_center {
-	text-align: center;
-	background-color: white;
+
 	padding-top: 20px;
 	margin-top: 35px;
 	height: 100px;
 	color: #ff6e60;
+}
+
+.foot_center p {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
