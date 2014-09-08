@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
-$text-color: white;
 
 html {
     height: 100%;
@@ -106,7 +104,6 @@ input    {
 	border: 1px solid #888888; 
 	width: 62%;
 	height: 50px;
-	font-size:10px;
 	padding-left: 15px;
 	letter-spacing: 1px;
 }
@@ -336,7 +333,6 @@ input    {
 /* footer */
 
 .footer {
-	background-color: white;
 	text-align: center;
 	padding-top: 20px;
 	margin-top: 35px;
