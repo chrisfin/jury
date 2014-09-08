@@ -70,7 +70,9 @@ class UsersController < ApplicationController
     end
 
     def admin_user
-      unless current_user.try(:admin?)
+      unless condition
+         
+       end current_user.try(:admin?)
         redirect_to(root_url)
         flash[:alert] = 'You must be an admin to access that page.'
       end

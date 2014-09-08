@@ -325,4 +325,36 @@ input    {
 	letter-spacing: 1px;
 }
 
+.wrapper {
+	min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+}
+
+/* footer */
+
+footer {
+	width:100%;
+	text-align: center;
+	margin-top: 40px;
+	height: 100px;
+  padding-top: 5px;
+  color: #ff6e60;
+  padding-left: 0px;
+  font-size: 12px;
+  position: absolute;
+}
+
+footer a {
+	color: white;
+&:hover {
+  color: black;
+  text-decoration: none;
+}
+}
+
+.footer_social {
+	padding-top: 10px;
+}
 
