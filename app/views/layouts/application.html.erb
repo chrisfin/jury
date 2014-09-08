@@ -11,7 +11,9 @@
 <body>  
 	<%= render 'layouts/header' %>	
 	<%= render 'layouts/flash' %>
-	<%= yield %>
-	<%= render 'layouts/footer' %>
+	<div class="container">	
+		<%= yield %>
+		<%= render 'layouts/footer' %>
+	</div>
 </body>
 </html>
