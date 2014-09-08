@@ -5,6 +5,10 @@
 @import 'bootstrap';
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
+@font-face {
+        font-family: "Lato";
+        src: url(/assets/Lato-Light.ttf) format("truetype");
+}
 
 html {
     height: 100%;
@@ -13,7 +17,7 @@ html {
 }
 
 body{
-	font-family: 'Lato', serif;
+	font-family: 'Lato';
 	font-weight: 100;
 	letter-spacing: 2px;
 	margin: 0;
