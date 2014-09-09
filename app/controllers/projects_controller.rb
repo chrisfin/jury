@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
 	def new
+    @header = "Submit a New Project"
 	  @project = Project.new
 	end
 
@@ -16,7 +17,7 @@ class ProjectsController < ApplicationController
           session.delete(:tagline)
           session.delete(:image_remote_url)
           session.delete(:last)
-          format.html { redirect_to @project, notice: 'Pin was successfully created.' }
+          format.html { redirect_to @project, notice: 'Project created successfully.' }
           format.json { render json: @project, status: :created, location: @project }
         else
           format.html { render action: "new" }
@@ -35,7 +36,28 @@ class ProjectsController < ApplicationController
 
 	def show
 		@project = Project.find(params[:id])
+
+    if current_user
+      @user = current_user.id
+    else
+      @user = -1
+    end
 	end
+
+  def edit
+    @header = "Edit Project"
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      flash[:success] = "Project updated"
+      redirect_to @project
+    else
+      render 'edit'
+    end
+  end
 
 
 	private

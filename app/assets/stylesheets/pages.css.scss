@@ -149,8 +149,8 @@ input    {
 
 .image_one{
 	position: absolute;
-  	left: 50%;
-  	margin-left: -325px;
+ 	left: 50%;
+  margin-left: -325px;
 }
 
 .image_two{
@@ -316,8 +316,8 @@ input    {
 	font-weight: 100;
 	text-shadow:none;
 	border-radius:0px;
-   	background-color: #ff6e60;
-   	color: white;
+  background-color: #ff6e60;
+  color: white;
 	overflow: hidden;
 	letter-spacing: 1px;
 	margin-bottom: 10px;
@@ -332,12 +332,22 @@ input    {
 
 /* footer */
 
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   height: auto !important;
+   height: 100%;
+   margin: 0px 0px -140px 0px;
+ }
+
 .foot_center {
+	width: 100%;
 	text-align: center;
-	padding-top: 20px;
-	margin-top: 35px;
-	height: 100px;
+	padding-top: 50px;
+	margin-top: 45px;
+	height: 140px;
 	color: #ff6e60;
+	clear: both;
 }
 
 .foot_center a {
@@ -350,4 +360,51 @@ input    {
 	margin-right: auto;
 }
 
+/* project show */
+
+.main_show {
+	margin-top: 110px;
+	padding-left: 60px;
+	float: left;
+	width: 60%;
+	height: 450px;
+	background-color: transparent;
+	background-size: contain;
+	background-position: center center;
+	background-repeat:no-repeat;
+	box-shadow:none;
+}
+
+.main_show img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.side_show {
+	margin-top: 90px;
+	float: right;
+	color: white;
+	width: 35%;
+}
+
+.side_show h1 {
+	font-size: 20px;
+	font-weight: 100;
+}
+.side_show p {
+	font-size: 20px;
+	color: #f97b5e;
+	padding-top: 10px;
+}
+
+
+.white_box {
+	height: 100px;
+	width: 60%;
+	background-color: white;
+}
+
+.new_project_button{
+	padding-top: 40px;
+}
 

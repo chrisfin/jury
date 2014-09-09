@@ -1,5 +1,30 @@
-<%= @project.project_name %></br>
-<%= @project.tagline %>
 
-<%= image_tag @project.image(:twitter) %>
-<%= @project.user_id %>
+
+
+<div class="main_show" style="background-image: url('<%= @project.image(:twitter) %>')">
+
+</div>
+
+<div class="side_show">
+	<h1><%= @project.project_name %></br>
+			<%= @project.tagline %>
+	</h1>
+
+	<p>Discuss</p>
+	<div class="white_box">
+	</div>
+
+	<p>Share</p>
+	<div class="white_box">
+	</div>
+
+	<div class="new_project_button">
+		<% if @user == @project.user_id %>
+			Doesn't look quite right?</br>
+			<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-default btn-large" %>
+		<% else %>	
+			Can't wait to pitch your idea?</br>
+			<%= link_to "Submit a Project", edit_project_path, class: "btn btn-success btn-large" %>
+		<% end %>
+	</div>
+</div>
