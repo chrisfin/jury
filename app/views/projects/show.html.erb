@@ -1,4 +1,4 @@
-
+<%= render 'layouts/share' %>
 
 
 <div class="main_show" style="background-image: url('<%= @project.image(:twitter) %>')">
@@ -11,12 +11,16 @@
 	</h1>
 
 	<p>Discuss</p>
-	<div class="white_box">
-	</div>
+		<%= image_tag("comment-64.png") %>
+
 
 	<p>Share</p>
-	<div class="white_box">
-	</div>
+	<a href="javascript:fbShare('http://jsfiddle.net/stichoza/EYxTJ/', 'Fb Share', 'Jury - A Proving Ground for Startups', 'http://goo.gl/dS52U', 520, 350)">Share</a>
+
+		<%= image_tag("facebook-64.png") %>
+		<%= image_tag("twitter-64.png") %>
+		<%= image_tag("linkedin-64.png") %>
+		<%= image_tag("google-64.png") %>
 
 	<div class="new_project_button">
 		<% if @user == @project.user_id %>
@@ -24,7 +28,7 @@
 			<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-default btn-large" %>
 		<% else %>	
 			Can't wait to pitch your idea?</br>
-			<%= link_to "Submit a Project", edit_project_path, class: "btn btn-success btn-large" %>
+			<%= link_to "Submit a Pitch", new_project_path, class: "btn btn-success btn-large" %>
 		<% end %>
 	</div>
 </div>
