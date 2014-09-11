@@ -1,0 +1,27 @@
+<% if @project %>
+		<!-- Meta tages for Facebook sharing -->
+		<meta property="og:title" content="<%= yield(:title) %>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<%= request.original_url %>" />
+		<meta property="og:image" content="<%= image_url @project.image(:facebook) %>" />
+		<meta property="og:description" content="What do you think of this cool new startup pitch? Weigh in at THE JURY and join in on the discussion with the founder." />
+
+	<!-- Meta tages for Twitter sharing -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@theJURYco">
+	<meta name="twitter:title" content="<%= yield(:title) %>">
+	<meta name="twitter:description" content="What do you think of THE JURY? - Weigh in @theJURYco">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:image:src" content="<%= image_url @project.image(:twitter) %>">
+	<meta name="twitter:domain" content="<%= request.original_url %>">
+
+	<meta name="twitter:app:name:iphone" content="">
+	<meta name="twitter:app:name:ipad" content="">
+	<meta name="twitter:app:name:googleplay" content="">
+	<meta name="twitter:app:url:iphone" content="">
+	<meta name="twitter:app:url:ipad" content="">
+	<meta name="twitter:app:url:googleplay" content="">
+	<meta name="twitter:app:id:iphone" content="">
+	<meta name="twitter:app:id:ipad" content="">
+	<meta name="twitter:app:id:googleplay" content="">
+<% end %>

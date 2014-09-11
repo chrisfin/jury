@@ -2,12 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta property="og:title" content="<%= yield(:title) %>" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="<%= request.original_url %>" />
-	<meta property="og:image" content="<%= image_url @project.image(:facebook) %>" />
-	<meta property="og:description" content="Check out this cool new startup pitch. Learn more on THE JURY and join in on the discussion with the founder." />
 	
+	<%= render 'layouts/meta_social' %>
   <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
