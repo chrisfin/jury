@@ -1,11 +1,18 @@
+<% provide(:title, @title ||= 'JURY - Build Better Startups') %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JURY - Build Better Startups</title>
+  <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'juryfav.ico' %>
+
+  #OG Social Sharing 
+  <meta property="og:title" content="<%= yield(:title) %>" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<%= request.original_url %>" />
+	<meta property="og:image" content="<%= image_tag(@project.image) %>" />
 
 </head>
 <body>  

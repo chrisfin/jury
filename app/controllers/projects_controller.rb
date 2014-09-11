@@ -36,6 +36,7 @@ class ProjectsController < ApplicationController
 
 	def show
 		@project = Project.find(params[:id])
+    @title = "#{@project.project_name} - #{@project.tagline}"
 
     if current_user
       @user = current_user.id

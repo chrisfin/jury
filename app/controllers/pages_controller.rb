@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
 	def index
+		@title = "Different title"
 		@user = User.new
 	end
 
