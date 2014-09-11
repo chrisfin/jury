@@ -36,7 +36,11 @@ class ProjectsController < ApplicationController
 
 	def show
 		@project = Project.find(params[:id])
+    
+  #Metadata for social share buttons
     @title = "#{@project.project_name} - #{@project.tagline}"
+    @url = 
+    @image =
 
     if current_user
       @user = current_user.id
