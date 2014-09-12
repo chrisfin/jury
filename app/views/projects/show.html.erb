@@ -16,7 +16,7 @@
 	<p>Share</p>
 		<a href="javascript:fbShare('http://www.thejury.co/projects/1', 'Fb Share', 'Jury - A Proving Ground for Startups', 'http://goo.gl/dS52U', 520, 350)"><%= image_tag("facebook-64.png") %></a>
 
-		<a href="https://twitter.com/intent/tweet?url=http://www.thejury.co" target="_blank"><%= image_tag("twitter-64.png") %></a>
+		<a href="https://twitter.com/intent/tweet?url=#{request.original_url}" target="_blank"><%= image_tag("twitter-64.png") %></a>
 		<%= image_tag("linkedin-64.png") %>
 		<%= image_tag("google-64.png") %>
 
@@ -29,4 +29,12 @@
 			<%= link_to "Submit a Pitch", new_project_path, class: "btn btn-success btn-large" %>
 		<% end %>
 	</div>
+</div>
+
+<div>
+	<%= render 'comments/new' %>
+
+	<% @show_comments.each do |comment| %>
+		<%= comment.text %></br>
+	<% end %>	
 </div>

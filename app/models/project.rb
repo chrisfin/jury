@@ -6,10 +6,12 @@ class Project < ActiveRecord::Base
                             content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
                             size: { less_than: 2.megabytes }
 	belongs_to :user
+	has_many :comments
 
 	def image_remote_url=(url_value)
   	self.image = URI.parse(url_value) unless url_value.blank?	
   	super
   end
+
 
 end

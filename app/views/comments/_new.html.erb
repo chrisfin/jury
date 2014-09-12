@@ -1,0 +1,6 @@
+<%= simple_form_for(@comment) do |f| %>
+  <%= f.hidden_field :project_id, :value => @project.id %>
+  <%= f.text_field :text, label: "What do you think about this pitch?" %>
+
+  <%= f.submit "Sign in",:class=>'btn-action' %>
+<% end %>

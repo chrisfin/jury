@@ -2,6 +2,7 @@ Judgy::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   resources :users
   resources :projects
+  resources :comments
   root "pages#index"
   post "pages/beta"
   get "pages/beta"
