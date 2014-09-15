@@ -1,6 +1,6 @@
 <%= render 'projects/share' %>
 
-<div class="main_show" style="background-image: url('<%= @project.image(:facebook) %>')">
+<div class="main_show" style="background-image: url('<%= @project.image(:twitter) %>')">
 
 </div>
 
@@ -16,7 +16,7 @@
 	<p>Share</p>
 		<a href="javascript:fbShare('http://www.thejury.co/projects/1', 'Fb Share', 'Jury - A Proving Ground for Startups', 'http://goo.gl/dS52U', 520, 350)"><%= image_tag("facebook-64.png") %></a>
 
-		<a href="https://twitter.com/intent/tweet?url=#{request.original_url}" target="_blank"><%= image_tag("twitter-64.png") %></a>
+		<a href="https://twitter.com/intent/tweet?url=<%= request.original_url %>&image=<%=image_url @project.image(:twitter) %>&via=theJURYco&text=I%20just%20found%20this%20startup%20pitch%20about%20<%= @project.project_name %>.%20What%20do%20you%20think%20of%20it?%20" target="_blank"><%= image_tag("twitter-64.png") %></a>
 		<%= image_tag("linkedin-64.png") %>
 		<%= image_tag("google-64.png") %>
 
@@ -34,7 +34,19 @@
 <div>
 	<%= render 'comments/new' %>
 
-	<% @show_comments.each do |comment| %>
-		<%= comment.text %></br>
-	<% end %>	
+	<table class='comment_box' id='comment_table'>
+	  <thead>
+	    <tr>
+	      <th>Comments</th>
+	      <th>Posted By</th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @show_comments.each do |comment| %>
+	      <div class="comment_box"><%= render partial: 'comment_row', locals: {comment: comment} %></div>
+	    <% end %>
+	  </tbody>
+	</table>
+
 </div>

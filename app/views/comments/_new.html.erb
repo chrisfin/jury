@@ -1,4 +1,4 @@
-<%= simple_form_for(@comment) do |f| %>
+<%= simple_form_for(@comment, project_id: @project_id) do |f| %>
   <%= f.hidden_field :project_id, :value => @project.id %>
   <%= f.text_field :text, label: "What do you think about this pitch?" %>
 

@@ -5,6 +5,8 @@ class Project < ActiveRecord::Base
   validates_attachment :image, presence: true,
                             content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
                             size: { less_than: 2.megabytes }
+  validates :tagline, presence: true
+  validates :project_name, presence: true
 	belongs_to :user
 	has_many :comments
 

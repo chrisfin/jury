@@ -18,7 +18,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        store_comment(@comment.id, @comment.user_id)
+        format.html { redirect_to :back, notice: 'Comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @comment }
       else
         format.html { render action: 'new' }
@@ -31,11 +32,27 @@ class CommentsController < ApplicationController
   	@comment = Comment.find(params[:id])
   end
 
+  def claim
+    session[:claim] = params[:project_id]
+    redirect_to new_user_registration_path
+  end
+
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
       params.require(:comment).permit(:text, :project_id)
+    end
+
+    def store_comment(comment, user)
+      unless user
+        if session[:comment]
+          session[:comment] << comment
+        else
+          session[:comment] = Array.new
+          session[:comment] << comment
+        end
+      end
     end
 
 end
