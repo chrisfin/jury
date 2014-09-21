@@ -129,8 +129,8 @@ input    {
 	text-shadow:none;
 	border-radius:0px;
 	width:35%;
-   	background-color: #ff6e60;
-   	color: white;
+  background-color: #ff6e60;
+  color: white;
 	float: right;
 	overflow: hidden;
 	letter-spacing: 1px;
@@ -362,9 +362,12 @@ input    {
 
 /* project show */
 
-.main_show {
+.show_wrapper{
 	margin-top: 110px;
-	padding-left: 60px;
+	padding-bottom: 400px;
+}
+
+.main_show {
 	float: left;
 	width: 60%;
 	height: 450px;
@@ -375,14 +378,10 @@ input    {
 	box-shadow:none;
 }
 
-.main_show img {
-	margin-left: auto;
-	margin-right: auto;
-}
 
 .side_show {
-	margin-top: 90px;
 	float: right;
+	padding-right: 50px;
 	color: white;
 	width: 35%;
 }
@@ -397,19 +396,38 @@ input    {
 	padding-top: 10px;
 }
 
-
-.white_box {
-	width: 60%;
-	background-color: white;
-}
-
 .new_project_button{
 	padding-top: 40px;
 }
 
-.comment_box {
-	background-color: white;
-	border-top: solid 1px #242a2e;
-
+.comment_area {
+	padding-top: 100px;
+	padding-left: 60px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.comment_input{
+	width: 75%;
+}
+
+.comment_box {
+	color: white;
+	margin-top: 20px;
+	width: 90%;
+}
+
+.comment_box th {
+	font-size: 20px;
+	color: #f97b5e;
+}
+
+.comment_box td {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid grey;
+}
+
+
 

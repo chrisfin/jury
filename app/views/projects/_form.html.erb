@@ -9,7 +9,6 @@
 	    <%= f.input :image_remote_url, label: "or enter a URL", :input_html => { :value => session[:image_remote_url]} %>
 	    <%= f.input :project_name, :input_html => { :value => session[:project_name]} %>
 	    <%= f.input :tagline, label: "Tagline (Max 50 characters)",  :input_html => {value: session[:tagline],maxlength: 50} %>
-	    <%= f.input :twitter, value: session[:twitter], label: "Twitter handle (optional)", :input_html => { :value => session[:twitter]} %>
 
 			<%= f.submit "Submit Your Project", class: "btn-action-bottom" %>
 		<% end %>

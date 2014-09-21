@@ -1,52 +1,52 @@
 <%= render 'projects/share' %>
 
-<div class="main_show" style="background-image: url('<%= @project.image(:twitter) %>')">
+<div class="show_wrapper">
 
-</div>
+	<div class="main_show" style="background-image: url('<%= @project.image(:twitter) %>')">
 
-<div class="side_show">
-	<h1><%= @project.project_name %></br>
-			<%= @project.tagline %>
-	</h1>
+	</div>
 
-	<p>Discuss</p>
-		<%= image_tag("comment-64.png") %>
+	<div class="side_show">
+		<h1><%= @project.project_name %></br>
+				<%= @project.tagline %>
+		</h1>
+
+		<p>Discuss</p>
+			<%= link_to image_tag("comment-64.png"), "#discuss_anchor" %>
 
 
-	<p>Share</p>
-		<a href="javascript:fbShare('http://www.thejury.co/projects/1', 'Fb Share', 'Jury - A Proving Ground for Startups', 'http://goo.gl/dS52U', 520, 350)"><%= image_tag("facebook-64.png") %></a>
+		<p>Share</p>
+			<a href="javascript:fbShare('http://www.thejury.co/projects/1', 'Fb Share', 'Jury - A Proving Ground for Startups', 'http://goo.gl/dS52U', 520, 350)"><%= image_tag("facebook-64.png") %></a>
 
-		<a href="https://twitter.com/intent/tweet?url=<%= request.original_url %>&image=<%=image_url @project.image(:twitter) %>&via=theJURYco&text=I%20just%20found%20this%20startup%20pitch%20about%20<%= @project.project_name %>.%20What%20do%20you%20think%20of%20it?%20" target="_blank"><%= image_tag("twitter-64.png") %></a>
-		<%= image_tag("linkedin-64.png") %>
-		<%= image_tag("google-64.png") %>
+			<a href="https://twitter.com/intent/tweet?url=<%= request.original_url %>&image=<%=image_url @project.image(:twitter) %>&via=theJURYco&text=I%20just%20found%20this%20startup%20pitch%20-%20<%= @project.project_name %>.%20What%20do%20you%20think%20of%20it?%20" target="_blank"><%= image_tag("twitter-64.png") %></a>
 
-	<div class="new_project_button">
-		<% if @user == @project.user_id %>
-			Doesn't look quite right?</br>
-			<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-default btn-large" %>
-		<% else %>	
-			Can't wait to pitch your idea?</br>
-			<%= link_to "Submit a Pitch", new_project_path, class: "btn btn-success btn-large" %>
-		<% end %>
+		<div class="new_project_button">
+			<% if @user == @project.user_id %>
+				Doesn't look quite right?</br>
+				<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-default btn-large" %>
+			<% else %>	
+				Can't wait to pitch your idea?</br>
+				<%= link_to "Submit a Pitch", new_project_path, class: "btn btn-success btn-large" %>
+			<% end %>
+		</div>
 	</div>
 </div>
 
-<div>
-	<%= render 'comments/new' %>
+	<div class="comment_area">
+		<%= render 'comments/new' %>
+		<a name="discuss_anchor"></a>
 
-	<table class='comment_box' id='comment_table'>
-	  <thead>
-	    <tr>
-	      <th>Comments</th>
-	      <th>Posted By</th>
-	    </tr>
-	  </thead>
+		<table class='comment_box' id='comment_table'>
+		  <thead>
+		    <tr>
+		      <th>Discussion</th>
+		    </tr>
+		  </thead>
 
-	  <tbody>
-	    <% @show_comments.each do |comment| %>
-	      <div class="comment_box"><%= render partial: 'comment_row', locals: {comment: comment} %></div>
-	    <% end %>
-	  </tbody>
-	</table>
-
-</div>
+		  <tbody>
+		    <% @show_comments.each do |comment| %>
+		      <div class="comment_box"><%= render partial: 'comment_row', locals: {comment: comment} %></div>
+		    <% end %>
+		  </tbody>
+		</table>
+	</div>
