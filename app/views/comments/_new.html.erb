@@ -2,7 +2,7 @@
 	<%= simple_form_for(@comment, project_id: @project_id) do |f| %>
 	<%= f.error_notification %>
 	  <%= f.hidden_field :project_id, :value => @project.id %>
-	  <%= f.text_field :text, placeholder: "Help the founder refine his pitch. Discuss." %>
+	  <%= f.text_field :text, placeholder: "Help the founder refine his pitch. Share your thoughts." %>
 
 	  <%= f.submit "Post a Comment",:class=>'btn-action' %>
 	<% end %>

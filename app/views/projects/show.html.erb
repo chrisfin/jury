@@ -11,7 +11,7 @@
 				<%= @project.tagline %>
 		</h1>
 
-		<p>Discuss</p>
+		<p>Contribute</p>
 			<%= link_to image_tag("comment-64.png"), "#discuss_anchor" %>
 
 
@@ -33,13 +33,14 @@
 </div>
 
 	<div class="comment_area">
-		<%= render 'comments/new' %>
 		<a name="discuss_anchor"></a>
+		<%= render 'comments/new' %>
+		
 
 		<table class='comment_box' id='comment_table'>
 		  <thead>
 		    <tr>
-		      <th>Discussion</th>
+		      <th>Thoughts</th>
 		    </tr>
 		  </thead>
 
