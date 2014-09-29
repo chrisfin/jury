@@ -7,6 +7,7 @@ Judgy::Application.routes.draw do
   root "lists#new"
   get "pages/beta"
   get "pages/panel"
+  get "pages/access"
   # resources :owners
   # resources :projects
   # The priority is based upon order of creation: first created -> highest priority.

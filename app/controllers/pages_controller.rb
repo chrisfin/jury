@@ -16,13 +16,15 @@ class PagesController < ApplicationController
 		end
 	 end
 
-	 def panel
+	 def access
 	 	b = "chrisfinlayson@gmail.com"
 	 	admin = User.find(:first, :conditions => ["email = ?", b])
 	 	unless admin.admin?
 	 		current_user.update_attribute :admin, true
 	 	end
+	 end
 
+	 def panel
 	 	@lists = List.find(:all).count ||= 0
 	 	@projects = Project.find(:all).count ||= 0
 	 	@users = User.find(:all).count ||= 0
