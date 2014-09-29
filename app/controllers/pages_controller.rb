@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 	  email = params[:user][:email]
 	  cookies[:email] = email
 	  list_id = '1482a5058b'
-		gb.lists.subscribe({:id => list_id, :email => { "email" => email }})
+		# gb.lists.subscribe({:id => list_id, :email => { "email" => email }})
 	 end
 
 	 def panel
