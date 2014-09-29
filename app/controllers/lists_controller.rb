@@ -27,6 +27,15 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    respond_to do |format|
+      format.html { redirect_to lists_path }
+      format.json { head :no_content }
+    end
+  end
+
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
