@@ -1,4 +1,9 @@
 class ProjectsController < ApplicationController
+  before_action :admin_user,     only: :index
+
+  def index
+    @projects = Project.all
+  end
 
 	def new
     @header = "Submit a New Project"
@@ -64,16 +69,27 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    respond_to do |format|
+      format.html { redirect_to projects_path }
+      format.json { head :no_content }
+    end
+  end
+
 
 	private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_project
-      @project = User.find(params[:id])
-    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:image, :image_remote_url, :project_name, :twitter, :tagline)
     end
 
+    def admin_user
+      unless current_user.try(:admin?)
+        redirect_to(root_url)
+        flash[:alert] = 'You must be an admin to access that page.'
+      end
+    end 
 end
