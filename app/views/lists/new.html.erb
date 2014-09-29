@@ -9,10 +9,10 @@
 
 			<div class="action">
 		 		<div class="call">
-					<%= form_for @user, url: {controller: "pages", action: "beta" }, :class => "form-inline" do |f| %>
-							<% if @user.errors.any? %>
+					<%= form_for @list, :class => "form-inline" do |f| %>
+							<% if @list.errors.any? %>
 							<ul>
-							  <% @user.errors.full_messages.each do |msg| %>
+							  <% @list.errors.full_messages.each do |msg| %>
 							    <li><%= msg %></li>
 							  <% end %>
 							</ul>
@@ -86,7 +86,8 @@
 			
 		<div class="last_action">
 		 	<div class="last_call">
-				<%= form_for @user, url: {controller: "pages", action: "beta" }, :class => "form-inline" do |f| %>
+				<%= form_for @list, :class => "form-inline" do |f| %>
+
 					<div class="form-group">
 						<%= f.text_field :email, :placeholder => "Email Address" %>
 						<%= f.submit "Join the Beta", class: "btn-final_action" %>

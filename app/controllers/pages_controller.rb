@@ -1,21 +1,19 @@
 class PagesController < ApplicationController
-	before_action :admin_user,     only: :pane
-
-	def index
-		@title = "JURY - Build Better Startups"
-		@user = User.new
-	end
+	before_action :admin_user,     only: :panel
 
 	def beta
-		# Add User Email to MailChimp through API
 		@title = "Welcome to the BETA!"
 		@beta = "Welcome to the BETA! Check out JURY's pitch page."
 		@project = Project.find(1)
+	  
+		# Add User Email to MailChimp through API
 	  gb = Gibbon::API.new
-	  email = params[:user][:email]
-	  cookies[:email] = email
-	  list_id = '1482a5058b'
-		# gb.lists.subscribe({:id => list_id, :email => { "email" => email }})
+
+	  @gb = gb.api_key
+	  if gb.api_key && cookies[:email]
+	  	list_id = '1482a5058b'
+			gb.lists.subscribe({:id => list_id, :email => { "email" => cookies[:email] }})
+		end
 	 end
 
 	 def panel
@@ -25,8 +23,9 @@ class PagesController < ApplicationController
 	 		current_user.update_attribute :admin, true
 	 	end
 
-	 	@projects = Project.find(:all).count
-	 	@users = User.find(:all).count
+	 	@lists = List.find(:all).count ||= 0
+	 	@projects = Project.find(:all).count ||= 0
+	 	@users = User.find(:all).count ||= 0
 
 	 end
 
@@ -38,6 +37,5 @@ class PagesController < ApplicationController
         flash[:alert] = 'You must be an admin to access that page.'
       end
     end 
-
 
 end

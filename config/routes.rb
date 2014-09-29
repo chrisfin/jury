@@ -3,8 +3,8 @@ Judgy::Application.routes.draw do
   resources :users
   resources :projects
   resources :comments
-  root "pages#index"
-  post "pages/beta"
+  resources :lists
+  root "lists#new"
   get "pages/beta"
   get "pages/panel"
   # resources :owners

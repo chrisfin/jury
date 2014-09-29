@@ -1,0 +1,27 @@
+<div class="control_basic">  
+  <h1>Listing BETA list emails</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @lists.each do |list| %>
+        <tr>
+          <td><%= list.id %></td>
+          <td><%= list.email %></td>
+          <td><%= link_to 'Show', list %></td>
+          <td><%= link_to 'Edit', edit_list_path(list) %></td>
+          <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>
