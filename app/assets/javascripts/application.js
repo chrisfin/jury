@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
-//= require social-share-button
+//= require gritter
 //= require_tree .
