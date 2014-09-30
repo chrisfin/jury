@@ -38,6 +38,11 @@ body{
   font-size: 16px;
  }
 
+ .navbar-inner li a:hover {
+ 	background: none;
+ 	text-decoration: underline;
+ }
+
 .brand {
 	float: left;
 	font-size: 35px;
@@ -76,6 +81,32 @@ body{
 	text-align: center;
 	padding-bottom: 30px;
 
+}
+
+/* About Page */
+
+.about {
+	background: rgba(255, 110, 96, .85);
+	color: white;
+	height: 550px;
+}
+
+.about_img {
+	margin-top: -5px;
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.about_info {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.about_info p {
+	font-size: 25px;
+	font-weight: 300;
+	margin: 0px;
 }
 
 .message h1 {
@@ -347,7 +378,7 @@ input    {
 .foot_center {
 	width: 100%;
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 25px;
 	margin-top: 45px;
 	height: 140px;
 	color: #ff6e60;
