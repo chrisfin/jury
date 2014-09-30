@@ -2,8 +2,9 @@
 
 <div class="show_wrapper">
 	<h1><%= @beta %></h1>
-	<div class="main_show" style="background-image: url('<%= @project.image(:twitter) %>')">
 
+	<div class="main_show" >
+		<span class="helper"></span><%= image_tag(@project.image(:large)) %> 
 	</div>
 
 	<div class="side_show">
@@ -17,7 +18,7 @@
 
 
 		<p>Share</p>
-			<a href="javascript:fbShare('http://www.thejury.co/projects/1', 'Fb Share', 'Jury - A Proving Ground for Startups', 'http://goo.gl/dS52U', 520, 350)"><%= image_tag("facebook-64.png") %></a>
+			<a href="javascript:fbShare('http://www.thejury.co/projects/1', 'Fb Share', 'Jury - A Proving Ground for Startups', 'http://goo.gl/dS52U', 600, 500)"><%= image_tag("facebook-64.png") %></a>
 
 			<a href="https://twitter.com/intent/tweet?url=<%= request.original_url %>&image=<%=image_url @project.image(:twitter) %>&via=theJURYco&text=I%20just%20found%20this%20startup%20pitch%20-%20<%= @project.project_name %>.%20What%20do%20you%20think%20of%20it?%20" target="_blank"><%= image_tag("twitter-64.png") %></a>
 

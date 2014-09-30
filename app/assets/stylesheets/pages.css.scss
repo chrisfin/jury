@@ -381,15 +381,24 @@ input    {
 
 .main_show {
 	float: left;
-	width: 60%;
+	margin-left: 80px;
 	height: 450px;
-	background-color: transparent;
-	background-size: contain;
-	background-position: center center;
-	background-repeat:no-repeat;
-	box-shadow:none;
+  width: 50%;
 }
 
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.main_show img {
+	vertical-align: middle;
+	max-height: 450px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .side_show {
 	float: right;
