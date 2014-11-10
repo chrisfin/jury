@@ -15,6 +15,7 @@
         <tr>
           <td><%= list.id %></td>
           <td><%= list.email %></td>
+          <td><%= list.created_at %></td>
           <td><%= link_to 'Show', list %></td>
           <td><%= link_to 'Edit', edit_list_path(list) %></td>
           <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>

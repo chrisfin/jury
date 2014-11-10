@@ -4,13 +4,13 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="<%= request.original_url %>" />
 	<meta property="og:image" content="<%= image_url @project.image(:facebook) %>" />
-	<meta property="og:description" content="What do you think of this cool new startup pitch? Weigh in at JURY and join in on the discussion." />
+	<meta property="og:description" content="What do you think of this startup idea? Weigh in at the JURY." />
 
 	<!-- Meta tages for Twitter sharing -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@theJURYco">
 	<meta name="twitter:title" content="<%= yield(:title) %>">
-	<meta name="twitter:description" content="What do you think of THE JURY? - Weigh in @theJURYco">
+	<meta name="twitter:description" content="What do you think of this startup idea? Weigh in @theJURYco">
 	<meta name="twitter:creator" content="<%= @project.twitter %>">
 	<meta name="twitter:image:src" content="<%= image_url @project.image(:twitter) %>">
 	<meta name="twitter:domain" content="<%= request.original_url %>">
