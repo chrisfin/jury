@@ -43,6 +43,9 @@ class ProjectsController < ApplicationController
 		@project = Project.find(params[:id])
     @comment = Comment.new
     @show_comments = @project.comments.find(:all)
+    @image = params[:image]
+
+    @report = Report.find(:first, :conditions => ["project_id= ?", @project])
     
   #Metadata for social share buttons
     @title = "#{@project.project_name} - #{@project.tagline}"

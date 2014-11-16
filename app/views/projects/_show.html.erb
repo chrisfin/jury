@@ -4,7 +4,11 @@
 	<h1><%= @beta %></h1>
 
 	<div class="main_show" >
-		<span class="helper"></span><%= image_tag(@project.image(:large)) %> 
+		<% if @image == "judge" %>
+			<span class="helper"></span><%= image_tag(@report.image(:large)) %> 
+		<% else %>
+			<span class="helper"></span><%= image_tag(@project.image(:large)) %> 
+		<% end %>
 	</div>
 
 	<div class="side_show">
@@ -13,7 +17,18 @@
 				<%= @project.tagline %>
 		</h2>
 
-		<p>Contribute</p>
+		<p>Feedback</p>
+			<% if @report %>
+				<% if @image == "judge" %>
+					<%= link_to image_tag(@project.image(:thumb)), @project %>
+	 			<% else %>
+	 				<%= link_to image_tag("JudgeReportIcon.png"), {:controller => "projects", 
+	                       :action => "show", 
+	                       :id => @project,
+	 											:image => "judge"} %>
+	 			<% end %>
+
+			<% end %>
 			<%= link_to image_tag("comment-64.png"), "#discuss_anchor" %>
 
 
