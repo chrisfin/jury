@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140929205751) do
+ActiveRecord::Schema.define(version: 20141116171100) do
 
   create_table "comments", force: true do |t|
     t.datetime "created_at"
@@ -42,6 +42,20 @@ ActiveRecord::Schema.define(version: 20140929205751) do
   end
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+
+  create_table "reports", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.string   "overall_grade"
+    t.string   "fix_grade"
+    t.string   "pain_grade"
+  end
 
   create_table "users", force: true do |t|
     t.datetime "created_at"

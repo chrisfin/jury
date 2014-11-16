@@ -28,6 +28,7 @@ class PagesController < ApplicationController
 	 	@lists = List.find(:all).count ||= 0
 	 	@projects = Project.find(:all).count ||= 0
 	 	@users = User.find(:all).count ||= 0
+	 	@reports = Report.find(:all).count ||= 0
 
 	 end
 

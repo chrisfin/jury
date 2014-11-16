@@ -1,7 +1,7 @@
 <div class="control_basic">  
   <h1>Listing projects</h1>
 
-  <table>
+  <table class="index_table">
     <thead>
       <tr>
         <th></th>
@@ -13,12 +13,20 @@
     <tbody>
       <% @projects.each do |project| %>
         <tr>
+          <td><%= image_tag(project.image(:thumb)) %></td>
           <td><%= project.id %></td>
           <td><%= project.project_name %></td>
           <td><%= project.user.email %></td>
           <td><%= link_to 'Show', project %></td>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>
           <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td> 
+              <% if Report.find(:first, :conditions => ["project_id= ?", project]) %>
+                <%= image_tag(Report.find(:first, :conditions => ["project_id= ?", project]).image(:thumb)) %>
+              <% else %>
+                <%= link_to 'Create Report', {:controller => "reports", :action => "new", :project_id => project.id} %>
+              <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

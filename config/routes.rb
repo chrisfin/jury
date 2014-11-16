@@ -4,6 +4,7 @@ Judgy::Application.routes.draw do
   resources :projects
   resources :comments
   resources :lists
+  resources :reports
   root "lists#new"
   get "pages/beta"
   get "pages/panel"

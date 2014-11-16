@@ -1,0 +1,31 @@
+<div class="control_basic">  
+  <h1>Listing reports</h1>
+
+  <table class="index_table">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @reports.each do |report| %>
+        <tr>
+          <td><%= image_tag(report.project.image(:thumb)) %></td>
+          <td><%= image_tag(report.image(:thumb)) %></td>
+          <td><%= report.id %></td>
+          <td><%= report.project.project_name %></td>
+          <td><%= report.project.user.email %></td>
+          <td><%= link_to 'Show', report %></td>
+          <td><%= link_to 'Edit', edit_report_path(report, :project_id => report.project_id) %></td>
+          <td><%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>

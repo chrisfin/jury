@@ -1,0 +1,22 @@
+<div class="show_wrapper">
+	<h1>JudgeReport for <%= @report.project.project_name %></h1>
+
+	<div class="main_show" >
+		<span class="helper"></span><%= image_tag(@report.image(:large)) %> 
+	</div>
+
+	<div class="side_show">
+		<h2>
+				<%= @report.project.project_name %></br>
+				<%= @report.project.tagline %></br>
+				<% if @report.user %>
+					<%= @report.user.email %></br>
+				<% else %>
+					<p>User ID Not Fixed</p>
+				<% end %>
+
+				<%= image_tag(@report.project.image(:thumb))  %></br>
+				<%= link_to "Edit Report", edit_report_path(@report, :project_id => @report.project_id), class: "btn btn-default btn-large" %>
+		</h2>
+	</div>
+</div>
